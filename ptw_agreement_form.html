@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Price to Win – Customer Participation Agreement</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════════════
+   SCREEN STYLES
+═══════════════════════════════════════════════════ */
+:root{--gd:#1a3d1f;--gm:#2a6b2f;--gl:#3a9c42;--go:#c8992a;--gy:#f0c040;--red:#c0272d;
+  --cream:#faf7f0;--w:#fff;--grl:#f2f0ea;--grm:#d6d2c8;--grt:#555;--bdr:#c8c4b8}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow',sans-serif;background:var(--gd);
+  background-image:radial-gradient(ellipse at 20% 10%,rgba(58,156,66,.15) 0%,transparent 55%),
+  radial-gradient(ellipse at 80% 90%,rgba(200,153,42,.10) 0%,transparent 55%);
+  min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:40px 16px 80px}
+.shell{width:100%;max-width:860px}
+.hdr{display:flex;flex-direction:column;align-items:center;margin-bottom:32px}
+.logo-wrap{background:var(--gd);border:3px solid var(--go);border-radius:12px;padding:20px 36px;
+  display:inline-flex;flex-direction:column;align-items:center;
+  box-shadow:0 8px 32px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.07);margin-bottom:24px}
+.lp{font-family:'Barlow Condensed',sans-serif;font-size:62px;font-weight:900;line-height:1;
+  color:var(--gl);letter-spacing:-1px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.lsr{display:flex;align-items:center;gap:6px;margin:-4px 0}
+.ll{height:2px;width:60px;background:var(--go)}
+.ls{font-size:28px;color:var(--red);filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))}
+.lw{font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;color:var(--gd);
+  background:var(--gy);line-height:1;padding:2px 18px;letter-spacing:2px;
+  clip-path:polygon(4% 0%,96% 0%,100% 100%,0% 100%);margin-top:-2px}
+.hdr h1{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--cream);
+  letter-spacing:2px;text-transform:uppercase;text-align:center}
+.hdr .sub{font-size:13px;color:var(--gy);letter-spacing:1px;margin-top:4px;text-align:center}
+.vbanner{background:linear-gradient(135deg,var(--go),#a07520);border-radius:10px;
+  padding:14px 24px;margin-bottom:20px;display:flex;align-items:center;gap:14px;color:var(--gd)}
+.vbanner .vi{font-size:28px;flex-shrink:0}
+.vbanner h3{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.vbanner p{font-size:12.5px;opacity:.85}
+.pbtn{margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:1px;text-transform:uppercase;background:var(--gd);color:var(--gy);
+  border:none;border-radius:7px;padding:10px 20px;cursor:pointer;white-space:nowrap;flex-shrink:0}
+.pbtn:hover{background:var(--gm)}
+.card{background:var(--cream);border-radius:12px;border:1px solid var(--bdr);
+  box-shadow:0 16px 64px rgba(0,0,0,.35);overflow:hidden}
+.ch{background:var(--gd);padding:20px 32px;display:flex;justify-content:space-between;
+  align-items:center;border-bottom:3px solid var(--go)}
+.ch span{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;
+  color:var(--gy);letter-spacing:1px;text-transform:uppercase}
+.sdots{display:flex;gap:8px}
+.sd{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;
+  border:2px solid var(--go);color:var(--gy);transition:all .3s}
+.sd.active{background:var(--go);color:var(--gd)}
+.sd.done{background:var(--gl);border-color:var(--gl);color:#fff}
+form{padding:36px 40px 40px}
+.stitle{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--gd);
+  text-transform:uppercase;letter-spacing:1.5px;border-bottom:2px solid var(--go);
+  padding-bottom:8px;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.stitle .n{background:var(--gd);color:var(--gy);width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.sec{margin-bottom:36px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.s2{grid-column:1/-1}
+.f{display:flex;flex-direction:column;gap:6px}
+label{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--grt)}
+label .r{color:var(--red);margin-left:3px}
+input[type=text],input[type=tel],input[type=date]{font-family:'Barlow',sans-serif;font-size:15px;
+  padding:11px 14px;border:1.5px solid var(--bdr);border-radius:7px;background:var(--w);
+  color:#222;outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
+input:focus{border-color:var(--gm);box-shadow:0 0 0 3px rgba(42,107,47,.12)}
+input.err{border-color:var(--red)}
+input[readonly]{background:var(--grl);color:#444;cursor:default}
+.hint{font-size:11px;color:#888;margin-top:-2px}
+.ip{background:linear-gradient(135deg,var(--gd) 0%,#234528 100%);border-radius:9px;
+  padding:22px 26px;margin-bottom:28px;color:var(--cream);border:1px solid rgba(200,153,42,.3)}
+.ip p{font-size:13.5px;line-height:1.7;opacity:.92}
+.ip strong{color:var(--gy)}
+.tp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.pb{background:rgba(255,255,255,.06);border:1px solid rgba(200,153,42,.25);border-radius:7px;padding:14px 16px}
+.pb h4{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--gy);
+  letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.pb p{font-size:12.5px;opacity:.85;line-height:1.6}
+.rtabs{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+.rt{padding:9px 18px;border:2px solid var(--bdr);border-radius:7px;font-family:'Barlow Condensed',sans-serif;
+  font-size:14px;font-weight:700;letter-spacing:.5px;background:var(--w);color:var(--grt);
+  cursor:pointer;transition:all .2s}
+.rt:hover{border-color:var(--gm);color:var(--gd)}
+.rt.active{background:var(--gd);border-color:var(--gd);color:var(--gy)}
+.pt{width:100%;border-collapse:collapse;font-size:13.5px;border-radius:8px;overflow:hidden;
+  box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.pt thead tr{background:var(--gd);color:var(--gy)}
+.pt th{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1px;font-size:12px;
+  text-transform:uppercase;padding:12px 16px;text-align:left}
+.pt th:last-child{text-align:right}
+.pt td{padding:10px 16px;border-bottom:1px solid var(--grl);color:#333;line-height:1.5}
+.pt td:last-child{text-align:right;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;color:var(--gm)}
+.pt tr:nth-child(even) td{background:rgba(242,240,234,.6)}
+.cb{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+  padding:2px 8px;border-radius:3px;margin-right:6px}
+.cb-b{background:#e8f4e8;color:var(--gd)} .cb-c{background:#fff3e0;color:#8a5000}
+.cb-s{background:#fce4ec;color:#8b0000}   .cb-v{background:#e3f2fd;color:#0d47a1}
+.tr td{background:var(--gd)!important;color:var(--cream)!important;font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:15px;letter-spacing:.5px;padding:13px 16px}
+.tr td:last-child{color:var(--gy)!important;font-size:20px}
+.cl{display:flex;flex-direction:column;gap:12px;background:var(--grl);border-radius:9px;
+  padding:20px 24px;border:1px solid var(--grm)}
+.ci{display:flex;align-items:flex-start;gap:14px;cursor:pointer}
+.ci input[type=checkbox]{display:none}
+.cbox{width:22px;height:22px;border:2px solid var(--bdr);border-radius:5px;flex-shrink:0;
+  margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .2s;background:#fff}
+.ci input:checked~.cbox{background:var(--gm);border-color:var(--gm)}
+.ci input:checked~.cbox::after{content:'✓';color:#fff;font-size:14px;font-weight:700}
+.clbl{font-size:14px;color:#333;line-height:1.5}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.sb{background:var(--w);border:1.5px solid var(--bdr);border-radius:9px;padding:20px 22px}
+.sb h4{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;color:var(--gd);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--go)}
+.scw{border:1.5px solid var(--bdr);border-radius:6px;background:#fafafa;position:relative;
+  overflow:hidden;margin-bottom:12px}
+.scw canvas{display:block;width:100%;height:120px;cursor:crosshair;touch-action:none}
+.sph{position:absolute;bottom:10px;left:14px;font-size:11px;color:#bbb;pointer-events:none;letter-spacing:.5px}
+.sln{height:1px;background:var(--bdr);margin-bottom:8px}
+.csig{font-size:11px;color:var(--gm);cursor:pointer;background:none;border:none;
+  font-family:'Barlow',sans-serif;text-decoration:underline;padding:0}
+.siw{border:1.5px solid var(--bdr);border-radius:6px;background:#fafafa;height:120px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:12px;overflow:hidden}
+.siw img{max-height:110px;max-width:100%;object-fit:contain}
+.siw .ns{font-size:12px;color:#aaa;font-style:italic}
+.lbox{background:var(--w);border:2px solid var(--go);border-radius:10px;padding:22px 26px;
+  margin-top:24px;display:none}
+.lbox h4{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--gd);
+  letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.lu{font-family:'Barlow Condensed',sans-serif;font-size:13px;word-break:break-all;color:#1155cc;
+  background:var(--grl);border-radius:6px;padding:10px 14px;margin-bottom:12px;
+  border:1px solid var(--bdr);line-height:1.6}
+.cpbtn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:1px;
+  text-transform:uppercase;background:var(--gd);color:var(--gy);border:none;border-radius:6px;
+  padding:9px 20px;cursor:pointer}
+.cpbtn:hover{background:var(--gm)} .cpbtn.copied{background:var(--gl);color:var(--gd)}
+.sr{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:36px;
+  padding-top:32px;border-top:2px solid var(--grm)}
+.bsub{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;background:linear-gradient(135deg,var(--gm),var(--gd));color:var(--gy);
+  border:none;border-radius:9px;padding:17px 52px;cursor:pointer;
+  box-shadow:0 6px 20px rgba(42,107,47,.4);transition:all .25s}
+.bsub:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(42,107,47,.5)}
+.bsub:active{transform:translateY(0)}
+.bsub:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.disc{font-size:12px;color:#888;text-align:center;line-height:1.6;max-width:500px}
+.toast{position:fixed;bottom:30px;right:30px;background:var(--gd);color:var(--cream);
+  border:2px solid var(--go);border-radius:10px;padding:16px 22px;font-size:14px;
+  box-shadow:0 8px 32px rgba(0,0,0,.4);transform:translateY(100px);opacity:0;
+  transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000;max-width:320px}
+.toast.show{transform:translateY(0);opacity:1}
+.toast strong{color:var(--gy);display:block;margin-bottom:4px}
+.rbadge{display:inline-block;background:var(--gd);color:var(--gy);font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;letter-spacing:1px;padding:4px 14px;border-radius:5px;font-size:13px;margin-top:8px}
+body.vm input,body.vm select{pointer-events:none;background:var(--grl);color:#333}
+body.vm .ci{pointer-events:none}
+body.vm .rt{pointer-events:none}
+body.vm .sr,body.vm .lbox,body.vm .sdots{display:none!important}
+body.vm .ch span::after{content:" — READ ONLY VIEW"}
+body.vm .scw{display:none}
+body.vm .csig{display:none}
+@media(max-width:620px){
+  form{padding:24px 20px 32px}
+  .g2,.sg,.tp{grid-template-columns:1fr}
+  .lp{font-size:48px}.lw{font-size:56px}
+  .ch{flex-direction:column;gap:12px}
+}
+
+/* ═══════════════════════════════════════════════════
+   PRINT STYLES — matches original PTW document layout
+═══════════════════════════════════════════════════ */
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  @page{size:A4;margin:12mm 14mm}
+
+  /* Hide all screen UI */
+  body>*:not(#pdwrap){display:none!important}
+  #pdwrap{display:block!important}
+
+  body{background:#fff!important;padding:0!important;margin:0!important;
+    display:block!important;font-family:Arial,sans-serif!important;
+    font-size:9pt!important;color:#000!important}
+
+  /* ── Logo ── */
+  .pd-logo{text-align:center;margin-bottom:5pt}
+  .pd-logo-box{display:inline-block;border:2.5pt solid #2a6b2f;padding:4pt 20pt 5pt}
+  .pd-lp{font-family:Arial Black,Arial,sans-serif;font-size:26pt;font-weight:900;
+    color:#2a6b2f;line-height:1;letter-spacing:-0.5pt}
+  .pd-lsr{display:flex;align-items:center;justify-content:center;gap:4pt;margin:-2pt 0}
+  .pd-ll{flex:1;height:1pt;background:#c8992a}
+  .pd-ls{font-size:12pt;color:#c0272d}
+  .pd-lw{font-family:Arial Black,Arial,sans-serif;font-size:30pt;font-weight:900;
+    color:#1a3d1f;background:#f0c040;line-height:1.1;padding:0 10pt;
+    letter-spacing:2pt;display:inline-block}
+
+  /* ── Title ── */
+  .pd-title{font-family:Arial,sans-serif;font-size:15pt;font-weight:bold;
+    text-align:center;color:#000;margin:5pt 0 2pt;text-transform:uppercase;letter-spacing:1pt}
+  .pd-subtitle{font-size:9pt;text-align:center;color:#333;margin-bottom:7pt;font-style:italic}
+
+  /* ── Parties two-column bordered box ── */
+  .pd-parties{display:flex;border:1.5pt solid #000;margin-bottom:9pt}
+  .pd-pl{flex:1;padding:5pt 9pt;border-right:1pt solid #000}
+  .pd-pand{padding:5pt 7pt;display:flex;align-items:center;font-style:italic;
+    font-size:9pt;border-right:1pt solid #000}
+  .pd-pr{flex:1.1;padding:5pt 9pt}
+  .pd-plbl{font-weight:bold;font-size:9pt;margin-bottom:3pt}
+  .pd-fl{display:flex;align-items:baseline;margin-bottom:4pt;font-size:8.5pt}
+  .pd-flab{min-width:100pt;font-weight:normal}
+  .pd-fval{flex:1;border-bottom:0.5pt solid #000;padding-bottom:1pt;min-height:11pt}
+
+  /* ── Section headings ── */
+  .pd-sh{font-weight:bold;font-size:9.5pt;margin:7pt 0 2pt;color:#000}
+  .pd-bt{font-size:8.5pt;line-height:1.55;margin-bottom:2pt}
+  .pd-bul{font-size:8.5pt;line-height:1.55;padding-left:11pt;margin-bottom:2pt}
+  .pd-bul::before{content:"• "}
+
+  /* ── Products table ── */
+  .pd-tt{background:#000;color:#fff;font-weight:bold;font-size:11pt;text-align:center;
+    padding:4pt;letter-spacing:.5pt}
+  .pd-tbl{width:100%;border-collapse:collapse;font-size:8.5pt;margin-bottom:5pt;break-inside:avoid}
+  .pd-tbl th{background:#e8e8e8;font-weight:bold;border:0.5pt solid #999;padding:3pt 5pt;text-align:left;font-size:8.5pt}
+  .pd-tbl th:last-child{text-align:right;width:34pt}
+  .pd-tbl td{border:0.5pt solid #ccc;padding:3pt 5pt;vertical-align:middle}
+  .pd-tbl td:last-child{text-align:right;font-weight:bold}
+  .pd-tbl tr:nth-child(even) td{background:#f8f8f8}
+  .pd-tbl .trt td{background:#2a6b2f!important;color:#fff!important;font-weight:bold;font-size:9pt}
+  .pd-tbl .trt td:last-child{color:#f0c040!important}
+
+  /* ── Two-col lower sections ── */
+  .pd-2c{display:flex;gap:12pt;margin-bottom:5pt}
+  .pd-col{flex:1}
+
+  /* ── Signatures ── */
+  .pd-sig-grid{display:flex;gap:18pt;margin-top:8pt}
+  .pd-sig-box{flex:1;border:0.5pt solid #999;padding:7pt 9pt}
+  .pd-snl{display:flex;align-items:baseline;margin-bottom:7pt;font-size:8.5pt}
+  .pd-snl span:first-child{min-width:68pt}
+  .pd-sul{flex:1;border-bottom:0.5pt solid #000;min-height:11pt}
+  .pd-sdraw{border:0.5pt solid #ccc;height:46pt;background:#fafafa;
+    display:flex;align-items:center;justify-content:center;margin-bottom:4pt;overflow:hidden}
+  .pd-sdraw img{max-height:42pt;max-width:100%;object-fit:contain}
+}
+#pdwrap{display:none}
+</style>
+</head>
+<body>
+
+<script>const APPS_SCRIPT_URL='YOUR_APPS_SCRIPT_URL_HERE';</script>
+
+<!-- ═════════════════════════ SCREEN UI ═════════════════════════ -->
+<div class="shell">
+  <div class="hdr">
+    <div class="logo-wrap">
+      <div class="lp">PRICE</div>
+      <div class="lsr"><div class="ll"></div><div class="ls">★</div><div class="ll"></div></div>
+      <div class="lw">WIN</div>
+    </div>
+    <h1>Customer Participation Agreement</h1>
+    <p class="sub">Monthly Points · Prizes · Event Eligibility</p>
+  </div>
+
+  <div class="vbanner" id="vbanner" style="display:none">
+    <div class="vi">📋</div>
+    <div>
+      <h3>Signed Agreement — Read Only</h3>
+      <p>Permanent record of this signed agreement.</p>
+      <div class="rbadge" id="vref"></div>
+    </div>
+    <button class="pbtn" onclick="triggerPrint()">⬇ Save as PDF</button>
+  </div>
+
+  <div class="card">
+    <div class="ch">
+      <span id="cht">Complete all sections to submit</span>
+      <div class="sdots">
+        <div class="sd active" id="d1">1</div>
+        <div class="sd" id="d2">2</div>
+        <div class="sd" id="d3">3</div>
+        <div class="sd" id="d4">4</div>
+      </div>
+    </div>
+
+    <form id="ptwForm" novalidate>
+
+      <!-- 1 Overview -->
+      <div class="sec">
+        <div class="stitle"><span class="n">1</span> Programme Overview</div>
+        <div class="ip">
+          <p>The <strong>Price to Win Programme (PTW)</strong> is a national incentive programme designed to encourage responsible pricing, product availability, and execution standards. Participation does <strong>not</strong> guarantee any reward — all prizes are awarded via random draw.</p>
+          <div class="tp">
+            <div class="pb"><h4>Phase One</h4><p>Customers assessed on affordability metrics may earn points and stand a chance to win monthly spot prizes.</p></div>
+            <div class="pb"><h4>Phase Two</h4><p>Subject to audit and verification, customers may enter a random draw for the Extravaganza Event.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 Customer Details -->
+      <div class="sec">
+        <div class="stitle"><span class="n">2</span> Customer Details</div>
+        <div class="g2">
+          <div class="f">
+            <label>Outlet Name <span class="r">*</span></label>
+            <input type="text" id="outletName" placeholder="e.g. Corner Bottle Store" required/>
+          </div>
+          <div class="f">
+            <label>Outlet Code <span class="r">*</span></label>
+            <input type="text" id="outletCode" placeholder="e.g. CPT-0023" required/>
+            <span class="hint">Your unique Heineken Beverages outlet code</span>
+          </div>
+          <div class="f">
+            <label>Owner / Tenant Name <span class="r">*</span></label>
+            <input type="text" id="ownerName" placeholder="Full legal name" required/>
+          </div>
+          <div class="f">
+            <label>Liquor Licence Number <span class="r">*</span></label>
+            <input type="text" id="licenceNo" placeholder="e.g. LLC 2024/00123" required/>
+          </div>
+          <div class="f s2">
+            <label>Customer Cellphone Number <span class="r">*</span></label>
+            <input type="tel" id="custCell" placeholder="e.g. 082 123 4567" required/>
+            <span class="hint">South African cellphone number (e.g. 082 123 4567 or +27821234567)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Eligibility -->
+      <div class="sec">
+        <div class="stitle"><span class="n">3</span> Eligibility Confirmation</div>
+        <p style="font-size:13.5px;color:var(--grt);margin-bottom:16px;">Please confirm you meet all eligibility requirements:</p>
+        <div class="cl">
+          <label class="ci"><input type="checkbox" class="ec"/><div class="cbox"></div><span class="clbl">I hold a <strong>valid liquor licence</strong> as required by law.</span></label>
+          <label class="ci"><input type="checkbox" class="ec"/><div class="cbox"></div><span class="clbl">I am <strong>compliant</strong> with all current Heineken Beverages agreements.</span></label>
+          <label class="ci"><input type="checkbox" class="ec"/><div class="cbox"></div><span class="clbl">I <strong>maintain all Heineken Beverages assets</strong> in good working condition.</span></label>
+          <label class="ci"><input type="checkbox" class="ec"/><div class="cbox"></div><span class="clbl">I have <strong>no outstanding compliance issues</strong> with Heineken Beverages.</span></label>
+        </div>
+      </div>
+
+      <!-- 4 Products -->
+      <div class="sec">
+        <div class="stitle"><span class="n">4</span> Participating Products &amp; Points</div>
+        <p style="font-size:13.5px;color:var(--grt);margin-bottom:16px;">Select your region:</p>
+        <div class="rtabs">
+          <button type="button" class="rt active" onclick="setRegion('wc')">Western Cape &amp; Eastern Cape</button>
+          <button type="button" class="rt" onclick="setRegion('gp')">Gauteng, Far North, Central &amp; East Coast</button>
+        </div>
+        <div id="twc">
+          <table class="pt">
+            <thead><tr><th>Category</th><th>Metric</th><th>Points</th></tr></thead>
+            <tbody>
+              <tr><td><span class="cb cb-b">Beer</span></td><td>Does outlet have Heineken 650ml Available and Affordable?</td><td>40</td></tr>
+              <tr><td><span class="cb cb-b">Beer</span></td><td>Does outlet have Amstel 660ml Available and Affordable?</td><td>40</td></tr>
+              <tr><td><span class="cb cb-b">Beer</span></td><td>Does outlet have Windhoek 660ml Available and Affordable?</td><td>40</td></tr>
+              <tr><td><span class="cb cb-c">Cider</span></td><td>Does outlet have Savanna Dry 330/500ml Available and Affordable?</td><td>20</td></tr>
+              <tr><td><span class="cb cb-c">Cider</span></td><td>Does outlet have Hunter's Dry/Gold 660ml Available and Affordable?</td><td>20</td></tr>
+              <tr><td><span class="cb cb-c">Cider</span></td><td>Does outlet have any Bernini 275/440ml Available and Affordable?</td><td>20</td></tr>
+              <tr><td><span class="cb cb-s">Spirit</span></td><td>Does outlet have Old Buck 750ml or 200ml Available and Affordable?</td><td>50</td></tr>
+              <tr><td><span class="cb cb-v">Cold/Vis</span></td><td>Does the outlet have a Heineken Beverages Front Facing Fridge?</td><td>75</td></tr>
+              <tr><td><span class="cb cb-v">Cold/Vis</span></td><td>Is the outlet's Heineken Beverages Fridge Packed according to Planogram?</td><td>25</td></tr>
+              <tr class="tr"><td colspan="2">Total Points</td><td>330</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tgp" style="display:none">
+          <table class="pt">
+            <thead><tr><th>Category</th><th>Metric</th><th>Points</th></tr></thead>
+            <tbody>
+              <tr><td><span class="cb cb-b">Beer</span></td><td>Does outlet have Heineken 650ml Available and Affordable?</td><td>40</td></tr>
+              <tr><td><span class="cb cb-b">Beer</span></td><td>Does outlet have Amstel 660ml Available and Affordable?</td><td>40</td></tr>
+              <tr><td><span class="cb cb-b">Beer</span></td><td>Does outlet have Windhoek 660ml Available and Affordable?</td><td>40</td></tr>
+              <tr><td><span class="cb cb-c">Cider</span></td><td>Does outlet have any Savanna Available and Affordable?</td><td>20</td></tr>
+              <tr><td><span class="cb cb-c">Cider</span></td><td>Does outlet have Hunters 660ml Available and Affordable?</td><td>20</td></tr>
+              <tr><td><span class="cb cb-c">Cider</span></td><td>Does outlet have any Bernini Available and Affordable?</td><td>20</td></tr>
+              <tr><td><span class="cb cb-v">Cold/Vis</span></td><td>Does the outlet have a Heineken Beverages Front Facing Fridge?</td><td>75</td></tr>
+              <tr><td><span class="cb cb-v">Cold/Vis</span></td><td>Is the outlet's Heineken Beverages Fridge Packed according to Planogram?</td><td>75</td></tr>
+              <tr class="tr"><td colspan="2">Total Points</td><td>330</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:18px;background:var(--grl);border-radius:7px;padding:14px 18px;font-size:13px;color:var(--grt);border-left:3px solid var(--go);">
+          <strong>Affordability Measurement:</strong> Metrics are measured through audits and calculated as a percentage. Customers achieving <strong>100%</strong> for the Affordability metric may stand a chance to win monthly prizes via random draw.
+        </div>
+        <input type="hidden" id="selReg" value="wc"/>
+      </div>
+
+      <!-- 5 T&Cs -->
+      <div class="sec">
+        <div class="stitle"><span class="n">5</span> Terms, Conditions &amp; Declaration</div>
+        <div style="background:#fff;border:1.5px solid var(--bdr);border-radius:9px;padding:20px 24px;margin-bottom:20px;font-size:13px;color:#444;line-height:1.8;">
+          <p><strong style="color:var(--gd);">8.1</strong> Participation constitutes acceptance of all Terms and Conditions.</p>
+          <p><strong style="color:var(--gd);">8.2</strong> In the event of any conflict, the Terms and Conditions shall prevail.</p>
+          <p><strong style="color:var(--gd);">8.3</strong> Heineken Beverages reserves the right to amend or terminate this programme at any time without notice.</p>
+          <p><strong style="color:var(--gd);">8.4</strong> The Protection of Personal Information Act (POPIA) applies.</p>
+          <p><strong style="color:var(--gd);">Event Attendance:</strong> Not guaranteed; subject to achieving affordability metrics and successful verification.</p>
+        </div>
+        <label class="ci" style="cursor:pointer">
+          <input type="checkbox" id="atc"/>
+          <div class="cbox"></div>
+          <span class="clbl" style="font-size:14px;font-weight:500;">I have read, understood, and agree to all Terms and Conditions. <span class="r">*</span></span>
+        </label>
+      </div>
+
+      <!-- 6 Signatures -->
+      <div class="sec">
+        <div class="stitle"><span class="n">6</span> Signatures</div>
+        <div class="sg">
+          <div class="sb">
+            <h4>Customer Signature</h4>
+            <div class="f" style="margin-bottom:14px;">
+              <label>Full Name <span class="r">*</span></label>
+              <input type="text" id="csn" placeholder="Print full name" required/>
+            </div>
+            <div class="f" style="margin-bottom:14px;">
+              <label>Date <span class="r">*</span></label>
+              <input type="date" id="csd" required/>
+            </div>
+            <label style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--grt);display:block;margin-bottom:8px;">Signature <span class="r">*</span></label>
+            <div class="scw">
+              <canvas id="cc" height="120"></canvas>
+              <span class="sph" id="cph">Sign here with mouse or touch</span>
+            </div>
+            <div class="siw" id="csi" style="display:none"><span class="ns">Signature on file</span></div>
+            <div class="sln"></div>
+            <button type="button" class="csig" onclick="clrSig('cc','cph','hcs')">Clear signature</button>
+          </div>
+          <div class="sb">
+            <h4>Rep Signature</h4>
+            <div class="f" style="margin-bottom:14px;">
+              <label>Rep Name <span class="r">*</span></label>
+              <input type="text" id="rsn" placeholder="Print full name" required/>
+            </div>
+            <div class="f" style="margin-bottom:14px;">
+              <label>Date <span class="r">*</span></label>
+              <input type="date" id="rsd" required/>
+            </div>
+            <label style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--grt);display:block;margin-bottom:8px;">Signature <span class="r">*</span></label>
+            <div class="scw">
+              <canvas id="rc" height="120"></canvas>
+              <span class="sph" id="rph">Sign here with mouse or touch</span>
+            </div>
+            <div class="siw" id="rsi" style="display:none"><span class="ns">Signature on file</span></div>
+            <div class="sln"></div>
+            <button type="button" class="csig" onclick="clrSig('rc','rph','hrs')">Clear signature</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr">
+        <button type="submit" class="bsub" id="subbtn">✓ Submit Agreement</button>
+        <p class="disc">Submitting saves a permanent record to the PTW register. A unique shareable link will be generated and stored in the submissions spreadsheet, named as [Outlet Code] – [Outlet Name].</p>
+      </div>
+
+      <div class="lbox" id="lbox">
+        <h4>✅ Agreement Saved — Your Link</h4>
+        <p style="font-size:13px;color:var(--grt);margin-bottom:12px;">This permanent link opens a read-only view of this signed agreement. It has been logged in the PTW submissions spreadsheet.</p>
+        <div class="lu" id="glink"></div>
+        <button class="cpbtn" id="cpbtn" onclick="cpLink()">Copy Link</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <strong id="ttl">Notice</strong>
+  <span id="tmsg"></span>
+</div>
+
+<!-- ═════════════════════════ PRINT DOCUMENT ═════════════════════════
+     Hidden on screen. Rendered only when printing / saving as PDF.
+     Layout mirrors the original PTW contract exactly.
+══════════════════════════════════════════════════════════════════ -->
+<div id="pdwrap">
+  <div id="pd">
+
+    <!-- Logo -->
+    <div class="pd-logo">
+      <div class="pd-logo-box">
+        <div class="pd-lp">PRICE</div>
+        <div class="pd-lsr"><div class="pd-ll"></div><div class="pd-ls">★</div><div class="pd-ll"></div></div>
+        <div class="pd-lw">WIN</div>
+      </div>
+    </div>
+    <div class="pd-title">Customer Participation Agreement</div>
+    <div class="pd-subtitle">(Monthly Points, Prizes &amp; Event Eligibility)</div>
+
+    <!-- Parties box -->
+    <div class="pd-parties">
+      <div class="pd-pl">
+        <div class="pd-plbl">This Participation Agreement is entered into between:</div>
+        <p style="font-size:8.5pt;line-height:1.6;margin:0">
+          Heineken Beverages South Africa (Pty) Ltd<br/>
+          (Registration No: 2003/026165/07)<br/>
+          ("Heineken Beverages" / "the Promoter")
+        </p>
+      </div>
+      <div class="pd-pand">And</div>
+      <div class="pd-pr">
+        <div class="pd-plbl">Customer Details</div>
+        <div class="pd-fl"><span class="pd-flab">Outlet Name:</span><span class="pd-fval" id="p-on"></span></div>
+        <div class="pd-fl"><span class="pd-flab">Outlet Code:</span><span class="pd-fval" id="p-oc"></span></div>
+        <div class="pd-fl"><span class="pd-flab">Owner / Tenant Name:</span><span class="pd-fval" id="p-own"></span></div>
+        <div class="pd-fl"><span class="pd-flab">Liquor Licence Number:</span><span class="pd-fval" id="p-lic"></span></div>
+        <div class="pd-fl"><span class="pd-flab">Cellphone Number:</span><span class="pd-fval" id="p-cel"></span></div>
+      </div>
+    </div>
+
+    <!-- Sections 2–3 -->
+    <div class="pd-sh">2. Programme Overview</div>
+    <div class="pd-bt">2.1 The Price to Win Programme ("PTW") is a national incentive programme designed to encourage responsible pricing, product availability, and execution standards.</div>
+    <div class="pd-bt">2.2 The Programme is structured in two phases:</div>
+    <div class="pd-bul"><strong>Phase One:</strong> Customers are assessed on affordability metrics and may earn points and stand a chance to win monthly spot prizes.</div>
+    <div class="pd-bul"><strong>Phase Two:</strong> Customers may, subject to audit and verification, stand a chance to be entered into a random draw for the Extravaganza Event.</div>
+    <div class="pd-bt">2.3 Participation does not guarantee any reward. All prizes are awarded via random draw.</div>
+
+    <div class="pd-sh">3. Eligibility</div>
+    <div class="pd-bt">3.1 Participation is limited to qualifying customers as determined by Heineken Beverages.</div>
+    <div class="pd-bt">3.2 Customers must:</div>
+    <div class="pd-bul">Hold a valid liquor licence</div>
+    <div class="pd-bul">Be compliant with Heineken agreements</div>
+    <div class="pd-bul">Maintain assets in good condition</div>
+    <div class="pd-bul">Have no outstanding compliance issues</div>
+
+    <!-- Section 4 — Products table (built by JS) -->
+    <div class="pd-sh">4. Participating Products &amp; Affordability</div>
+    <div class="pd-bt">4.1 Customers agree to participate in affordability initiatives aligned to recommended selling prices (RSP).</div>
+    <div class="pd-bt">4.2 Products include:</div>
+    <div id="p-tbl"></div>
+
+    <!-- Sections 5–8 in two columns -->
+    <div class="pd-2c">
+      <div class="pd-col">
+        <div class="pd-sh">5. Affordability Measurement</div>
+        <div class="pd-bt">5.1 Affordability is measured through audits.</div>
+        <div class="pd-bt">5.2 Metrics include: Availability &amp; affordability, Merchandising &amp; visibility, Asset care, Audit participation and valid liquor license.</div>
+        <div class="pd-bt">5.3 Metrics are calculated as a percentage.</div>
+        <div class="pd-bt">5.4 Metrics may vary by region.</div>
+        <div class="pd-sh">6. Qualification &amp; Rewards</div>
+        <div class="pd-bt">6.1 Customers achieving 100% for Affordability metric may stand a chance to win monthly prizes via random draw.</div>
+        <div class="pd-bt">6.2 Performance determines eligibility only.</div>
+        <div class="pd-bt">6.3 Customers may qualify for Golden Ticket draw subject to verification.</div>
+      </div>
+      <div class="pd-col">
+        <div class="pd-sh">7. Event Attendance</div>
+        <div class="pd-bt">7.1 Not guaranteed.</div>
+        <div class="pd-bt">7.2 Subject to achieving affordability metrics and verification.</div>
+        <div class="pd-sh">8. General</div>
+        <div class="pd-bt">8.1 Participation constitutes acceptance of T&amp;Cs.</div>
+        <div class="pd-bt">8.2 T&amp;Cs prevail in case of conflict.</div>
+        <div class="pd-bt">8.3 Programme may be amended or terminated.</div>
+        <div class="pd-bt">8.4 POPIA applies.</div>
+      </div>
+    </div>
+
+    <!-- Signature blocks -->
+    <div class="pd-sig-grid">
+      <div class="pd-sig-box">
+        <div class="pd-snl"><span>Customer Name:</span><span class="pd-sul" id="p-csn"></span></div>
+        <div class="pd-sdraw" id="p-csdraw"><span style="font-size:7pt;color:#bbb">Signature</span></div>
+        <div class="pd-snl"><span>Date:</span><span class="pd-sul" id="p-csd"></span></div>
+      </div>
+      <div class="pd-sig-box">
+        <div class="pd-snl"><span>Rep Name:</span><span class="pd-sul" id="p-rsn"></span></div>
+        <div class="pd-sdraw" id="p-rsdraw"><span style="font-size:7pt;color:#bbb">Signature</span></div>
+        <div class="pd-snl"><span>Date:</span><span class="pd-sul" id="p-rsd"></span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ── config ── */
+let hcs=false,hrs=false,isVM=false,gUrl='';
+const WCR=[
+  ['Beer',"Does outlet have Heineken 650ml Available and Affordable?",40],
+  ['Beer',"Does outlet have Amstel 660ml Available and Affordable?",40],
+  ['Beer',"Does outlet have Windhoek 660ml Available and Affordable?",40],
+  ['Cider',"Does outlet have Savanna Dry 330/500ml Available and Affordable?",20],
+  ['Cider',"Does outlet have Hunter's Dry/Gold 660ml Available and Affordable?",20],
+  ['Cider',"Does outlet have any Bernini 275/440ml Available and Affordable?",20],
+  ['Spirit',"Does outlet have Old Buck 750ml or 200ml Available and Affordable?",50],
+  ['Cold/Visibility',"Does the outlet have a Heineken Beverages Front Facing Fridge?",75],
+  ['Cold/Visibility',"Is the outlets Heineken Beverages Fridge Packed according to Planogram?",25],
+];
+const GPR=[
+  ['Beer',"Does outlet Have Heineken 650ml Available and Affordable?",40],
+  ['Beer',"Does outlet Have Amstel 660ml Available and Affordable?",40],
+  ['Beer',"Does outlet Have Windhoek 660ml Available and Affordable?",40],
+  ['Cider',"Does outlet Have any Savanna Available and Affordable?",20],
+  ['Cider',"Does outlet Have Hunters 660ml Available and Affordable?",20],
+  ['Cider',"Does outlet Have any Bernini Available and Affordable?",20],
+  ['Cold/Visibility',"Does the outlet have a Heineken Beverages Front Facing Fridge?",75],
+  ['Cold/Visibility',"Is the outlets Heineken Beverages Fridge Packed according to Planogram?",75],
+];
+
+/* ── region ── */
+function setRegion(r){
+  document.getElementById('selReg').value=r;
+  document.getElementById('twc').style.display=r==='wc'?'':'none';
+  document.getElementById('tgp').style.display=r==='gp'?'':'none';
+  document.querySelectorAll('.rt').forEach((t,i)=>
+    t.classList.toggle('active',(i===0&&r==='wc')||(i===1&&r==='gp')));
+}
+
+/* ── print doc builder ── */
+function fmtDate(d){if(!d)return'';const[y,m,dd]=d.split('-');return`${dd}/${m}/${y}`;}
+function buildPD(d){
+  const s=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v||'';};
+  s('p-on',d.outlet_name);s('p-oc',d.outlet_code);s('p-own',d.owner_name);
+  s('p-lic',d.licence_no);s('p-cel',d.cust_cell);
+  s('p-csn',d.cust_sig_name);s('p-csd',fmtDate(d.cust_sig_date));
+  s('p-rsn',d.rep_sig_name);s('p-rsd',fmtDate(d.rep_sig_date));
+
+  const isGP=d.region&&d.region.includes('Gauteng');
+  const rows=isGP?GPR:WCR;
+  const ttl=isGP?'Gauteng, Far North, Central, East Coast':'Western Cape and Eastern Cape';
+  const tot=rows.reduce((a,r)=>a+r[2],0);
+  let h=`<div class="pd-tt">${ttl}</div>
+  <table class="pd-tbl"><thead><tr><th>Category</th><th>Metric</th><th>Points</th></tr></thead><tbody>`;
+  rows.forEach(([c,m,p])=>h+=`<tr><td>${c}</td><td>${m}</td><td>${p}</td></tr>`);
+  h+=`<tr class="trt"><td colspan="2"><strong>Total Points</strong></td><td><strong>${tot}</strong></td></tr></tbody></table>`;
+  document.getElementById('p-tbl').innerHTML=h;
+
+  ['c','r'].forEach(w=>{
+    const img=d[`${w==='c'?'cust':'rep'}_sig_img`];
+    const el=document.getElementById(`p-${w}sdraw`);
+    if(el&&img&&img.length>100)el.innerHTML=`<img src="${img}" alt="Signature"/>`;
+  });
+}
+
+/* ── trigger print ── */
+function triggerPrint(){
+  const p=new URLSearchParams(window.location.search);
+  if(p.get('v')==='1')buildPD({
+    outlet_name:p.get('on'),outlet_code:p.get('oc'),owner_name:p.get('own'),
+    licence_no:p.get('lic'),cust_cell:p.get('cel'),region:p.get('reg'),
+    cust_sig_name:p.get('csn'),cust_sig_date:p.get('csd'),
+    rep_sig_name:p.get('rsn'),rep_sig_date:p.get('rsd'),
+    cust_sig_img:p.get('cs'),rep_sig_img:p.get('rs'),
+  });
+  window.print();
+}
+
+/* ── view mode ── */
+function initVM(){
+  const p=new URLSearchParams(window.location.search);
+  if(p.get('v')!=='1')return;
+  isVM=true;
+  document.body.classList.add('vm');
+  document.getElementById('vbanner').style.display='flex';
+  const sv=(id,v)=>{const e=document.getElementById(id);if(e)e.value=v||'';};
+  sv('outletName',p.get('on'));sv('outletCode',p.get('oc'));sv('ownerName',p.get('own'));
+  sv('licenceNo',p.get('lic'));sv('custCell',p.get('cel'));
+  sv('csn',p.get('csn'));sv('csd',p.get('csd'));
+  sv('rsn',p.get('rsn'));sv('rsd',p.get('rsd'));
+  setRegion(p.get('reg')&&p.get('reg').includes('Gauteng')?'gp':'wc');
+  document.querySelectorAll('.ec,#atc').forEach(c=>c.checked=true);
+  const ref=`${p.get('oc')||''} – ${p.get('on')||''}`;
+  document.getElementById('vref').textContent=ref;
+  document.title=`PTW Agreement – ${ref}`;
+  const cs=p.get('cs'),rs=p.get('rs');
+  if(cs)showSI('csi',cs);if(rs)showSI('rsi',rs);
+  const at=p.get('at');
+  if(at)document.getElementById('cht').textContent=`Signed Agreement  ·  ${at}`;
+  buildPD({outlet_name:p.get('on'),outlet_code:p.get('oc'),owner_name:p.get('own'),
+    licence_no:p.get('lic'),cust_cell:p.get('cel'),region:p.get('reg'),
+    cust_sig_name:p.get('csn'),cust_sig_date:p.get('csd'),
+    rep_sig_name:p.get('rsn'),rep_sig_date:p.get('rsd'),
+    cust_sig_img:cs,rep_sig_img:rs});
+}
+function showSI(id,src){
+  const e=document.getElementById(id);if(!e||!src)return;
+  e.innerHTML=`<img src="${src}" alt="Signature"/>`;e.style.display='flex';
+}
+
+/* ── canvas ── */
+function setupC(cid,phid,flag){
+  const cv=document.getElementById(cid),ph=document.getElementById(phid);
+  const ctx=cv.getContext('2d'),dpr=window.devicePixelRatio||1;
+  cv.width=cv.offsetWidth*dpr;cv.height=120*dpr;ctx.scale(dpr,dpr);
+  ctx.strokeStyle='#1a3d1f';ctx.lineWidth=2.2;ctx.lineCap='round';ctx.lineJoin='round';
+  let draw=false,lx=0,ly=0;
+  function pos(e){const r=cv.getBoundingClientRect(),s=e.touches?e.touches[0]:e;
+    return{x:s.clientX-r.left,y:s.clientY-r.top};}
+  function start(e){e.preventDefault();draw=true;ph.style.display='none';
+    const{x,y}=pos(e);lx=x;ly=y;ctx.beginPath();ctx.moveTo(x,y);
+    if(flag==='hcs')hcs=true;if(flag==='hrs')hrs=true;}
+  function mv(e){if(!draw)return;e.preventDefault();const{x,y}=pos(e);
+    ctx.beginPath();ctx.moveTo(lx,ly);ctx.lineTo(x,y);ctx.stroke();lx=x;ly=y;}
+  function stop(){draw=false;}
+  cv.addEventListener('mousedown',start);cv.addEventListener('mousemove',mv);
+  cv.addEventListener('mouseup',stop);cv.addEventListener('mouseleave',stop);
+  cv.addEventListener('touchstart',start,{passive:false});
+  cv.addEventListener('touchmove',mv,{passive:false});
+  cv.addEventListener('touchend',stop);
+}
+function clrSig(cid,phid,flag){
+  const cv=document.getElementById(cid),ctx=cv.getContext('2d'),dpr=window.devicePixelRatio||1;
+  ctx.clearRect(0,0,cv.width/dpr,cv.height/dpr);
+  document.getElementById(phid).style.display='';
+  if(flag==='hcs')hcs=false;if(flag==='hrs')hrs=false;
+}
+
+/* ── toast & dots ── */
+function toast(ttl,msg){
+  document.getElementById('ttl').textContent=ttl;document.getElementById('tmsg').textContent=msg;
+  const t=document.getElementById('toast');t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),4500);
+}
+function dots(n){for(let i=1;i<=4;i++){const d=document.getElementById('d'+i);
+  d.className='sd';if(i<n)d.classList.add('done');else if(i===n)d.classList.add('active');}}
+
+/* ── build view URL ── */
+function mkUrl(d){
+  const b=window.location.origin+window.location.pathname;
+  return`${b}?${new URLSearchParams({v:'1',oc:d.outlet_code,on:d.outlet_name,
+    own:d.owner_name,lic:d.licence_no,cel:d.cust_cell,reg:d.region,
+    csn:d.cust_sig_name,csd:d.cust_sig_date,rsn:d.rep_sig_name,rsd:d.rep_sig_date,
+    at:d.submitted_at,cs:d.cust_sig_img,rs:d.rep_sig_img}).toString()}`;
+}
+function cpLink(){
+  navigator.clipboard.writeText(gUrl).then(()=>{
+    const b=document.getElementById('cpbtn');b.textContent='✓ Copied!';b.classList.add('copied');
+    setTimeout(()=>{b.textContent='Copy Link';b.classList.remove('copied');},2500);});
+}
+
+/* ── validation ── */
+function validate(){
+  let ok=true,fe=null;
+  const req=[['outletName','Outlet Name'],['outletCode','Outlet Code'],
+    ['ownerName','Owner Name'],['licenceNo','Liquor Licence No.'],
+    ['custCell','Customer Cellphone Number'],
+    ['csn','Customer Full Name'],['csd','Customer Date'],
+    ['rsn','Rep Name'],['rsd','Rep Date']];
+  req.forEach(([id,lbl])=>{const e=document.getElementById(id);
+    if(!e.value.trim()){e.classList.add('err');if(!fe)fe=lbl;ok=false;}
+    else e.classList.remove('err');});
+  const ce=document.getElementById('custCell');
+  if(ce.value.trim()&&!/^(\+27|0)[6-8][0-9]{8}$/.test(ce.value.replace(/\s/g,''))){
+    ce.classList.add('err');if(!fe)fe='Valid SA Cellphone Number';ok=false;}
+  if(!Array.from(document.querySelectorAll('.ec')).every(c=>c.checked)){
+    if(!fe)fe='all eligibility checkboxes';ok=false;}
+  if(!document.getElementById('atc').checked){if(!fe)fe='Terms & Conditions';ok=false;}
+  if(!hcs){if(!fe)fe='Customer Signature';ok=false;}
+  if(!hrs){if(!fe)fe='Rep Signature';ok=false;}
+  if(!ok)toast('Missing Information',`Please complete: ${fe}`);
+  return ok;
+}
+
+/* ── submit ── */
+document.getElementById('ptwForm').addEventListener('submit',async function(e){
+  e.preventDefault();if(!validate())return;
+  const btn=document.getElementById('subbtn');
+  btn.disabled=true;btn.textContent='Saving…';
+  const reg=document.getElementById('selReg').value==='wc'
+    ?'Western Cape & Eastern Cape':'Gauteng, Far North, Central & East Coast';
+  const csi=document.getElementById('cc').toDataURL('image/png');
+  const rsi=document.getElementById('rc').toDataURL('image/png');
+  const at=new Date().toLocaleString('en-ZA',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  const data={
+    outlet_name:document.getElementById('outletName').value.trim(),
+    outlet_code:document.getElementById('outletCode').value.trim(),
+    owner_name:document.getElementById('ownerName').value.trim(),
+    licence_no:document.getElementById('licenceNo').value.trim(),
+    cust_cell:document.getElementById('custCell').value.trim(),
+    region:reg,
+    cust_sig_name:document.getElementById('csn').value.trim(),
+    cust_sig_date:document.getElementById('csd').value,
+    rep_sig_name:document.getElementById('rsn').value.trim(),
+    rep_sig_date:document.getElementById('rsd').value,
+    cust_sig_img:csi,rep_sig_img:rsi,submitted_at:at,
+  };
+  buildPD(data);
+  gUrl=mkUrl(data);data.view_url=gUrl;
+  try{
+    if(APPS_SCRIPT_URL&&APPS_SCRIPT_URL!=='YOUR_APPS_SCRIPT_URL_HERE')
+      await fetch(APPS_SCRIPT_URL,{method:'POST',body:JSON.stringify(data)});
+    document.getElementById('glink').textContent=gUrl;
+    document.getElementById('lbox').style.display='block';
+    document.getElementById('lbox').scrollIntoView({behavior:'smooth',block:'start'});
+    toast('Agreement Saved',`Ref: ${data.outlet_code} – ${data.outlet_name}`);
+  }catch{
+    document.getElementById('glink').textContent=gUrl;
+    document.getElementById('lbox').style.display='block';
+    toast('Saved Locally','Copy the link — connect your spreadsheet to enable auto-logging.');
+  }
+  btn.disabled=false;btn.textContent='✓ Submit Agreement';
+});
+
+/* ── init ── */
+window.addEventListener('load',()=>{
+  initVM();
+  if(!isVM){
+    setupC('cc','cph','hcs');setupC('rc','rph','hrs');
+    const t=new Date().toISOString().split('T')[0];
+    document.getElementById('csd').value=t;document.getElementById('rsd').value=t;
+    dots(1);
+  }
+});
+document.querySelectorAll('input').forEach(el=>el.addEventListener('input',()=>el.classList.remove('err')));
+document.getElementById('outletName').addEventListener('input',()=>
+  dots(document.getElementById('outletName').value.trim()?2:1));
+document.querySelectorAll('.ec').forEach(c=>c.addEventListener('change',()=>{
+  if(Array.from(document.querySelectorAll('.ec')).every(x=>x.checked))dots(4);}));
+</script>
+</body>
+</html>
